@@ -9,7 +9,8 @@ public class PLayerMove : MonoBehaviour {
 	public float jumpSpeed = 1.5f;
 	public float superSpeed = 10;
 	public float superJump = 4f;
-	public float wait = false;
+	public bool wait = false;
+	public float speed = 1.5f;
 	//public Sprite sprite3;
 	// Use this for initialization
 	void Start () {
@@ -17,13 +18,10 @@ public class PLayerMove : MonoBehaviour {
 		animator = GetComponent<Animator>();
 	}
 	
+	 void Update () {
 	
-	public float speed = 1.5f;
-	// Update is called once per frame
-	void Update () {
 	
-		
-		
+
 		if (Input.GetKey(KeyCode.RightArrow)){
 			gameObject.GetComponent<SpriteRenderer>().sprite = sprite2;
 			float h = Input.GetAxis("Horizontal");
@@ -51,19 +49,20 @@ public class PLayerMove : MonoBehaviour {
 			transform.position += Vector3.up * jumpSpeed * Time.deltaTime * 3;
 			wait = true;
 		}
-		if (wait = true) {
+		/*if (wait == true) {
 
 				yield return new WaitForSeconds(5);
 				
-			}
+			}*/
 
-		if (Input.GetKey(KeyCode.DownArrow))
+	 if (Input.GetKey(KeyCode.DownArrow))
 		{
 			transform.position += Vector3.down * speed * Time.deltaTime;
 		}
+
 		
-		
-		
+
+
 		
 		
 		
