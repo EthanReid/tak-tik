@@ -56,7 +56,7 @@ public class PLayerMove : MonoBehaviour {
 				yield return new WaitForSeconds(5);
 				
 			}
-		}
+
 		if (Input.GetKey(KeyCode.DownArrow))
 		{
 			transform.position += Vector3.down * speed * Time.deltaTime;
@@ -69,6 +69,5 @@ public class PLayerMove : MonoBehaviour {
 		
 	}
 }
-
 
 
