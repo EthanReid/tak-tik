@@ -6,11 +6,11 @@ public class PLayerMove : MonoBehaviour {
 	//public Sprite sprite1;
 	//public Sprite sprite2;
 	public bool isFacingRight = true;	
-	public float jumpSpeed = 1.5f;
-	public float superSpeed = 10;
-	public float superJump = 4f;
+	public float jumpSpeed = 3f;
+	public float superSpeed = 7;
+	public float superJump = 3f;
 	public bool wait = false;
-	public float speed = 10.5f;
+	public float speed = 1.5f;
 	//public Sprite sprite3;
 	// Use this for initialization
 	void Start () {
@@ -38,16 +38,17 @@ public class PLayerMove : MonoBehaviour {
 		
 		if (Input.GetKey(KeyCode.LeftArrow))
 		{
-			transform.position += Vector3.left * speed * Time.deltaTime;
+			transform.position += Vector3.left * speed * Time.deltaTime * 3;
 		}
 		if (Input.GetKey(KeyCode.RightArrow))
 		{
-			transform.position += Vector3.right * speed * Time.deltaTime;
+			transform.position += Vector3.right * speed * Time.deltaTime * 3;
 		}
 
 		if (Input.GetKey(KeyCode.UpArrow))
 		{
-			transform.position += Vector3.up * jumpSpeed * Time.deltaTime * 3;
+			transform.position += Vector3.up * jumpSpeed * Time.deltaTime * 3
+			;
 			wait = true;
 		}
 		/*if (wait == true) {
@@ -69,5 +70,4 @@ public class PLayerMove : MonoBehaviour {
 		
 	}
 }
-
 
