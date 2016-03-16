@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{3E8253DC-F679-5162-37E6-316F38F7B4D1}") = "Tik Tak", "Assembly-CSharp.csproj", "{42B5978C-A11C-9843-09E7-472520F858FD}"
 EndProject
+Project("{3E8253DC-F679-5162-37E6-316F38F7B4D1}") = "Tik Tak", "Assembly-CSharp-Editor.csproj", "{5E075AAF-B758-46F1-E4C7-4DEF858B0133}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{42B5978C-A11C-9843-09E7-472520F858FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42B5978C-A11C-9843-09E7-472520F858FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42B5978C-A11C-9843-09E7-472520F858FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E075AAF-B758-46F1-E4C7-4DEF858B0133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E075AAF-B758-46F1-E4C7-4DEF858B0133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E075AAF-B758-46F1-E4C7-4DEF858B0133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E075AAF-B758-46F1-E4C7-4DEF858B0133}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																						GlobalSection(MonoDevelopProperties) = preSolution
+																											GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

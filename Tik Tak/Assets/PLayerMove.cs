@@ -6,11 +6,8 @@ public class PLayerMove : MonoBehaviour {
 	//public Sprite sprite1;
 	//public Sprite sprite2;
 	public bool isFacingRight = true;	
-	public float jumpSpeed = 3f;
-	public float superSpeed = 7;
-	public float superJump = 3f;
 	public bool wait = false;
-	public float speed = 1.5f;
+	public float speed = 10.5f;
 	//public Sprite sprite3;
 	// Use this for initialization
 	void Start () {
@@ -21,48 +18,28 @@ public class PLayerMove : MonoBehaviour {
 	 void Update () {
 	
 	
-
-		/*if (Input.GetKey(KeyCode.RightArrow)){
-			gameObject.GetComponent<SpriteRenderer>().sprite = sprite2;
-			float h = Input.GetAxis("Horizontal");
-			
-			animator.SetFloat("Speed", Mathf.Abs (speed));
-			print (speed);
-		}
-		if (Input.GetKey(KeyCode.LeftArrow)){
-			gameObject.GetComponent<SpriteRenderer>().sprite = sprite1;
-		}*/
-		if (Input.GetMouseButtonDown (0)){
+		if (Input.GetKeyUp(KeyCode.UpArrow))
+		{
 			transform.position += Vector3.up * speed * Time.deltaTime * 3;
-		}
-		
-		if (Input.GetKey(KeyCode.LeftArrow))
-		{
-			transform.position += Vector3.left * speed * Time.deltaTime * 3;
-		}
-		if (Input.GetKey(KeyCode.RightArrow))
-		{
-			transform.position += Vector3.right * speed * Time.deltaTime * 3;
-		}
-
-		if (Input.GetKey(KeyCode.UpArrow))
-		{
-			transform.position += Vector3.up * jumpSpeed * Time.deltaTime * 3
-			;
 			wait = true;
 		}
-		/*if (wait == true) {
 
-				yield return new WaitForSeconds(5);
-				
-			}*/
-
-	 if (Input.GetKey(KeyCode.DownArrow))
+		if (Input.GetKeyUp(KeyCode.DownArrow))
 		{
-			transform.position += Vector3.down * speed * Time.deltaTime;
+			transform.position += Vector3.down * speed * Time.deltaTime * 3;
+			wait = true;
+		}
+		if (Input.GetKeyUp(KeyCode.RightArrow))
+		{
+			transform.position += Vector3.right * speed * Time.deltaTime * 3;
+			wait = true;
+		}
+		if (Input.GetKeyUp(KeyCode.LeftArrow))
+		{
+			transform.position += Vector3.left * speed * Time.deltaTime * 3;
+			wait = true;
 		}
 
-		
 
 
 		
@@ -70,4 +47,5 @@ public class PLayerMove : MonoBehaviour {
 		
 	}
 }
+
 
